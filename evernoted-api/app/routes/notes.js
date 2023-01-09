@@ -94,7 +94,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
-
 const isOwner = (user, note) => {
     return JSON.stringify(user._id) == JSON.stringify(note.author._id);
 }
