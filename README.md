@@ -24,3 +24,52 @@
 <br>
 
 <ul><li><h2>💻 Screens:</h2></li></ul>
+<div>
+  <h3 align="center">Home:</h3>
+  <p align="center">
+    <img src="screens_image/Home.png" width="70%" height="70%">
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h3 align="center">Login:</h3>
+  <p align="center">
+    <img src="screens_image/Login.png" width="70%" height="70%">
+  </p>
+</div>
+
+<div>
+  <h3 align="center">Register:</h3>
+  <p align="center">
+    <img src="screens_image/Register.png" width="70%" height="70%">
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h3 align="center">Application:</h3>
+  <p align="center">
+    <img src="screens_image/Notes.png" width="70%" height="70%">
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h3 align="center">Edit Notes:</h3>
+  <p align="center">
+    <img src="screens_image/Rich Text.png" width="70%" height="70%">
+  </p>
+</div>
+
+<br>
+
+<div>
+  <h3 align="center">Edit User:</h3>
+  <p align="center">
+    <img src="screens_image/Edit Info.png" width="70%" height="70%">
+  </p>
+</div>
