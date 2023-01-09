@@ -1,0 +1,1 @@
+Evernoted is a basic notes application
