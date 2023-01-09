@@ -2,8 +2,6 @@
 
 <h4>Evernoted is a basic notes on cloud application</h4>
 
-<br>
-
 <ul><li><h2>✨ Features:</h2></li></ul>
 <p> ✔️ Api for HTTP requests </p>
 <p> ✔️ JWT Authentication </p>
