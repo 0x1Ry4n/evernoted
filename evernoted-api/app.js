@@ -1,5 +1,4 @@
 const express = require('express');
-const path = require('path');
 const cors = require('cors'); 
 const logger = require('morgan');
 require('./config/database');
@@ -18,6 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/users', usersRouter);
 app.use('/notes', notesRouter); 
+
+app.get('/', (req, res) => {
+    res.send('Hi, evernoted API is running!')
+})
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
