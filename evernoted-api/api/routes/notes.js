@@ -26,7 +26,7 @@ router.get('/search', withAuth, async (req, res) => {
 
         res.json(notes);
     } catch (err) {
-        res.status(500).json({ error: err });
+        res.status(500).json({ error: 'Problem to filter the note!' });
     }
 });
 
@@ -40,8 +40,8 @@ router.get('/:id', withAuth, async (req, res) => {
             res.json(note)
         else
             res.status(403).json({ error: 'Permission denied!' });
-    } catch (err) {
-        res.status(500).json({ error: 'Problem to get a note!' });
+    } catch (err) { 
+        res.status(500).json({ error: 'Problem to get the note!' });
     }
 });
 
@@ -73,7 +73,7 @@ router.put('/:id', withAuth, async (req, res) => {
         } else
             res.status(403).json({ error: 'Permission denied!' });
     } catch (err) {
-        res.status(500).json({ error: 'Problem to update a note!' });
+        res.status(500).json({ error: 'Problem to update the note!' });
     }
 });
 
@@ -90,7 +90,7 @@ router.delete('/:id', withAuth, async (req, res) => {
             res.status(403);
 
     } catch (err) {
-        res.status(500).json({ error: 'Problem to delete a note!' });
+        res.status(500).json({ error: 'Problem to delete the note!' });
     }
 });
 

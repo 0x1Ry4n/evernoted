@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 import { Button, Field, Control, Input, Column, Title, Help, Label } from 'rbx';
-import UserService from '../../../services/user';
+import UserService from '../../../services/userService';
 
 const UserEditPassword = () => {
     const [password, setPassword] = useState("");

@@ -4,7 +4,7 @@ import '../../styles/notes.scss';
 import List from './list/ListNotes'
 import Editor from './editor/Editor';
 import Search from './search/SearchNotes';
-import NoteService from '../../services/notes';
+import NoteService from '../../services/noteService';
 import { push as Menu } from 'react-burger-menu'
 
 const Notes = (props) => {

@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { Button, Field, Control, Input, Column, Section, Help, Label } from 'rbx';
-import UserService from '../../services/user';
+import UserService from '../../services/userService';
 import { Navigate } from 'react-router-dom';
 
 const RegisterForm = () => {

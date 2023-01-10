@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Button, Field, Control, Input, Column, Title, Help, Label } from 'rbx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import UserService from '../../../services/user';
+import UserService from '../../../services/userService';
 
 const UserEditForm = () => {
     const [email, setEmail] = useState("");

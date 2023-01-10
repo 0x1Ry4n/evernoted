@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const WORK_HASH_SALT = 10;
 
-
 let userSchema = new mongoose.Schema({
     name: String,
     email: { type: String, required: true, unique: true },
@@ -11,7 +10,7 @@ let userSchema = new mongoose.Schema({
     updated_at: { type: Date, default: Date.now }
 });
 
-userSchema.pre('save', function (next) {  // antes de exportar o model, gere o hash para a password
+userSchema.pre('save', function (next) {  // before export model, generate hash for password
     if (this.isModified('password')) {
         bcrypt.hash(this.password, WORK_HASH_SALT,
             (err, hashedPassword) => {
