@@ -4,7 +4,7 @@ require('dotenv').config();
 mongoose.set("strictQuery", true);
 
 main()
-    .then(() => console.log("Mongo DB connection sucessfull!"))
+    .then(() => console.log("Mongo DB connection estabilished!"))
     .catch(err => console.log(err));
 
 async function main() {
