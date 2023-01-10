@@ -7,13 +7,13 @@ import Notes from './screens/notes';
 import UserEdit from './screens/users/edit';
 import NotFound from './screens/404';
 
-const RequireAuth = ({children}) => {
-    let auth = localStorage.getItem('user'); 
-    
+const RequireAuth = ({ children }) => {
+    let auth = localStorage.getItem('user');
+
     if (!auth)
-        return <Navigate to='/login' />
-    
-    return children; 
+        return <Navigate to={{ pathname: '/login' }} />
+
+    return children;
 }
 
 const RouteMiddleware = () => {
@@ -23,8 +23,8 @@ const RouteMiddleware = () => {
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/register' element={<Register />} />
                 <Route exact path='/login' element={<Login />} />
-                <Route exact path='/notes' element={<RequireAuth><Notes/></RequireAuth>} />
-                <Route exact path='/users/edit' element={<RequireAuth><UserEdit/></RequireAuth>} />
+                <Route exact path='/notes' element={<RequireAuth><Notes /></RequireAuth>} />
+                <Route exact path='/users/edit' element={<RequireAuth><UserEdit /></RequireAuth>} />
                 <Route path='/404' element={<NotFound />} />
                 <Route path='*' element={<Navigate replace to="/404" />} />
             </Routes>

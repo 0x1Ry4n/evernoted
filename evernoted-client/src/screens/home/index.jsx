@@ -2,7 +2,8 @@ import React, { Fragment } from 'react';
 import { Column, Section, Title, Container } from "rbx";
 import Logo from '../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
-import Header from "../../components/header";
+import Header from "../../components/header/Header";
+import "../../styles/home.scss";
 
 const Home = () => {
     return (

@@ -10,7 +10,6 @@ const Editor = (props) => {
         setCurrentContent(props.note.body)
     }, [props.note])
 
-
     const updateNote = (content) => {
         const title = content.replace(/(<([^>]+)>)/ig, "").slice(0, 30);
         props.updateNote(props.note, { 'title': title, 'body': content })

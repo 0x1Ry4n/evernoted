@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from 'react';
-import { Column } from "rbx";
 import "../../styles/notes.scss";
-import HeaderLogged from '../../components/header/logged/logged';
-import Notes from '../../components/notes';
+import HeaderLogged from '../../components/header/logged/HeaderLogged';
+import Notes from '../../components/notes/Notes';
+
 
 const NotesScreen = () => {
     const [isOpen, setIsOpen] = useState(false)

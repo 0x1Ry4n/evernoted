@@ -1,9 +1,9 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Column, Button } from 'rbx';
 import '../../styles/notes.scss';
-import List from './list/list';
-import Editor from './editor/editor';
-import Search from './search/search';
+import List from './list/ListNotes'
+import Editor from './editor/Editor';
+import Search from './search/SearchNotes';
 import NoteService from '../../services/notes';
 import { push as Menu } from 'react-burger-menu'
 
@@ -48,7 +48,6 @@ const Notes = (props) => {
         setNotes(newNotes);
         setCurrentNote(updatedNote.data);
     }
-
 
     const deleteNote = async (note) => {
         await NoteService.delete(note._id);

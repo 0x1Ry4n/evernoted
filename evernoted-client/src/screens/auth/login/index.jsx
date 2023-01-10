@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import Header from "../../../components/header";
-import LoginForm from '../../../components/login/form';
+import Header from "../../../components/header/Header";
+import LoginForm from '../../../components/login/LoginForm';
 import { Column, Section, Title, Container, Card } from "rbx";
 import "../../../styles/auth.scss";
 

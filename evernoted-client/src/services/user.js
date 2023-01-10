@@ -1,4 +1,4 @@
-import Api from "./api";
+import Api from './api';
 
 const UserService = {
     register: (params) => Api.post("/users/register", params),

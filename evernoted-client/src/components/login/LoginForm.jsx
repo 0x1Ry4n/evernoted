@@ -17,7 +17,6 @@ const LoginForm = () => {
     else if (RedirectToNotes)
         return <Navigate to={{ pathname: "/notes" }} />
 
-
     const handleSubmit = async (event) => {
         event.preventDefault();
 

@@ -2,11 +2,11 @@ import React, { Fragment } from 'react';
 import { Column, Section, Title, Container, Card, Button } from "rbx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faUserCircle } from '@fortawesome/free-solid-svg-icons';
-import UserEditForm from '../../components/user/edit/edit';
-import UserEditPassword from '../../components/user/edit/password';
+import UserEditForm from '../../components/user/edit/EditUser';
+import UserEditPassword from '../../components/user/edit/EditPassword';
 import '../../styles/user.scss';
-import HeaderLogged from '../../components/header/logged/logged';
-import UserDelete from '../../components/user/delete';
+import HeaderLogged from '../../components/header/logged/HeaderLogged';
+import UserDelete from '../../components/user/DeleteAccount';
 
 const UserEdit = () => (
     <Fragment>

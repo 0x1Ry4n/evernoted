@@ -1,5 +1,7 @@
 import axios from 'axios'; 
 
-const Api = axios.create({baseURL: "http://localhost:3030"})
+const EVERNOTED_API_URI = "http://localhost:3030";
+
+const Api = axios.create({baseURL: EVERNOTED_API_URI})
 
 export default Api; 
