@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
 import { Button, Field, Control, Input, Column, Title, Help, Label } from 'rbx';
-import UserService from '../../../services/user';
+import UserService from '../../../services/userService';
 
 const UserEditPassword = () => {
     const [password, setPassword] = useState("");
@@ -12,13 +12,16 @@ const UserEditPassword = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (password === password_confirmation) {
+        if (password == password_confirmation) {
             try {
                 await UserService.updatePassword({ password: password });
                 setStatus("success");
             } catch (err) {
-                setStatus("error_confirmation_password");
+                console.log(err);
+                setStatus("error");
             }
+        } else {
+            setStatus("error_confirmation_password");
         }
     }
 
@@ -30,7 +33,7 @@ const UserEditPassword = () => {
                     <Control>
                         <Label className="has-text-grey"><FontAwesomeIcon icon={faLockOpen} /> Password</Label>
                         <Input
-                            type="text"
+                            type="password"
                             value={password}
                             onChange={e => setPassword(e.target.value)}
                             required
@@ -42,7 +45,7 @@ const UserEditPassword = () => {
                     <Control>
                         <Label className="has-text-grey"><FontAwesomeIcon icon={faLock} /> Password Confirmation</Label>
                         <Input
-                            type="text"
+                            type="password"
                             value={password_confirmation}
                             onChange={e => setPasswordConfirmation(e.target.value)}
                             required
