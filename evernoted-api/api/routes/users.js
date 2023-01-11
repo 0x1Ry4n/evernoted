@@ -48,7 +48,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.put('/', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   const { name, email } = req.body;
 
   try {
@@ -78,7 +78,7 @@ router.put('/password', withAuth, async (req, res) => {
 });
 
 
-router.delete('/', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     let user = User.findOne({ _id: req.user._id });
     await user.delete();
