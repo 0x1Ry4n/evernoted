@@ -1,6 +1,6 @@
 import React, { useState } from 'react'; 
 import { Button } from 'rbx'; 
-import UserService from '../../services/userService';
+import UserService from '../../services/user';
 import { Navigate } from 'react-router-dom';
 
 const UserDelete = () => {

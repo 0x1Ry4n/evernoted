@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { Navbar, Container, Column, Button, Dropdown } from 'rbx';
 import "../../../styles/header.scss";
-import UserService from '../../../services/userService';
+import UserService from '../../../services/user';
 import { Navigate, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faList } from '@fortawesome/free-solid-svg-icons'

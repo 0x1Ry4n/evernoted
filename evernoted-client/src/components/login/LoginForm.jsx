@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
 import { Button, Field, Control, Input, Column, Section, Help, Label } from "rbx";
 import { Navigate } from "react-router-dom";
-import UserService from '../../services/userService';
+import UserService from '../../services/user';
 
 const LoginForm = () => {
     const [email, setEmail] = useState("");
