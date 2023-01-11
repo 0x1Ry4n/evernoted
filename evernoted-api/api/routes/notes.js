@@ -12,7 +12,7 @@ router.post('/', withAuth, async (req, res) => {
         await note.save();
         res.status(200).json(note);
     } catch (err) {
-        res.status(500).json({ error: 'Problem to create a new note!' });
+        res.status(500).json({ error: 'Error creating a note!' });
     }
 });
 
@@ -26,7 +26,7 @@ router.get('/search', withAuth, async (req, res) => {
 
         res.json(notes);
     } catch (err) {
-        res.status(500).json({ error: 'Problem to filter the note!' });
+        res.status(500).json({ error: 'Error filtering the note!' });
     }
 });
 
@@ -41,7 +41,7 @@ router.get('/:id', withAuth, async (req, res) => {
         else
             res.status(403).json({ error: 'Permission denied!' });
     } catch (err) { 
-        res.status(500).json({ error: 'Problem to get the note!' });
+        res.status(500).json({ error: 'Error to get the note!' });
     }
 });
 
@@ -51,7 +51,7 @@ router.get('/', withAuth, async (req, res) => {
 
         res.status(200).json(notes);
     } catch (err) {
-        res.status(500).json({ error: 'Problem to get the notes!' });
+        res.status(500).json({ error: 'Error getting the notes!' });
     }
 });
 
@@ -73,7 +73,7 @@ router.put('/:id', withAuth, async (req, res) => {
         } else
             res.status(403).json({ error: 'Permission denied!' });
     } catch (err) {
-        res.status(500).json({ error: 'Problem to update the note!' });
+        res.status(500).json({ error: 'Error updating the note!' });
     }
 });
 
@@ -90,7 +90,7 @@ router.delete('/:id', withAuth, async (req, res) => {
             res.status(403);
 
     } catch (err) {
-        res.status(500).json({ error: 'Problem to delete the note!' });
+        res.status(500).json({ error: 'Error deleting the note!' });
     }
 });
 

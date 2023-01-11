@@ -12,16 +12,11 @@ const expires = process.env.JWT_EXPIRES;
 router.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
 
-  if (email == null || password == null) {
-    console.log("A field is missing!");
-    return res.status(500).json({ error: 'A field is missing!' });
-  }
-
   const user = new User({ name, email, password });
 
   try {
-    let result = await user.save();
-    res.status(200).json(result);
+    let newUser = await user.save();
+    res.status(200).json(newUser);
   } catch (err) {
     res.status(500).json({ error: 'Error registering new user!' });
     console.log(err);
@@ -53,19 +48,19 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.put('/:id', withAuth, async (req, res) => {
+router.put('/', withAuth, async (req, res) => {
   const { name, email } = req.body;
-  const { id } = req.params;
 
   try {
-    let updatedUser = User.findOneAndUpdate(id,
+    let updatedUser = User.findOneAndUpdate(
+      { _id: req.user._id },
       { $set: { name: name, email: email } },
-      { $upsert: true, 'new': true }
+      { upsert: true, 'new': true }
     );
 
     res.json(updatedUser);
   } catch (err) {
-    res.status(500).json({ error: 'Internal error, please try again! ' });
+    res.status(500).json({ error: 'Error updating user info!' });
   }
 });
 
@@ -78,21 +73,19 @@ router.put('/password', withAuth, async (req, res) => {
     user.save();
     res.json(user);
   } catch (err) {
-    res.status(500).json({ error: 'Internal error, please try again! ' });
+    res.status(500).json({ error: 'Error updating user password!' });
   }
 });
 
 
-router.delete('/:id', withAuth, async (req, res) => {
-  const { id } = req.params;
-
+router.delete('/', withAuth, async (req, res) => {
   try {
-    let user = User.findById(id);
+    let user = User.findOne({ _id: req.user._id });
     await user.delete();
 
     res.status(204).json({ message: 'User deleted successfully!' });
   } catch (err) {
-    res.status(500).json({ error: 'Internal error, please try again! ' });
+    res.status(500).json({ error: 'Error deleting user!' });
   }
 });
 
