@@ -2,7 +2,7 @@ import React, { Fragment, useEffect, useState } from 'react';
 import { Column, Button } from 'rbx';
 import '../../styles/notes.scss';
 import List from './list/ListNotes'
-import Editor from './editor/Editor';
+import Editor from './editor/EditorNote';
 import Search from './search/SearchNotes';
 import NoteService from '../../services/noteService';
 import { push as Menu } from 'react-burger-menu'
