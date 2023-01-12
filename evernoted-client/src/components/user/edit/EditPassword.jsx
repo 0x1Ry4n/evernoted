@@ -36,7 +36,7 @@ const UserEditPassword = () => {
                             type="password"
                             value={password}
                             onChange={e => setPassword(e.target.value)}
-                            required
+                            required    
                             name="password"
                         />
                     </Control>

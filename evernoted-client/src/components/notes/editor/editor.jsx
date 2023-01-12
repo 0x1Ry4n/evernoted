@@ -3,6 +3,7 @@ import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
 
 const Editor = (props) => {
+    
     const [currentContent, setCurrentContent] = useState('')
     const [timer, setTimer] = useState(null)
 

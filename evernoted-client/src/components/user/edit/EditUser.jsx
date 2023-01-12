@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { Button, Field, Control, Input, Column, Title, Help, Label } from 'rbx';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import UserService from '../../../services/user';
+import UserService from '../../../services/userService';
 
 const UserEditForm = () => {
     const [email, setEmail] = useState("");
@@ -11,8 +11,8 @@ const UserEditForm = () => {
 
     const initializeUser = async () => {
         const user = await JSON.parse(localStorage.getItem('user'));
-        setName(user.name);
-        setEmail(user.email);
+        setName(user['name']);
+        setEmail(user['email']);
     }
 
     useEffect(() => {
@@ -23,9 +23,10 @@ const UserEditForm = () => {
         event.preventDefault();
 
         try {
-            await UserService.update({ email: email, name: name })
+            await UserService.update({email: email, name: name })
             setStatus("success");
         } catch (err) {
+            console.log(err);
             setStatus("error");
         }
     }
