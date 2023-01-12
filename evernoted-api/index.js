@@ -9,7 +9,9 @@ const notesRouter = require('./api/routes/notes');
 const port = 3030; 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://evernoted-client.vercel.app', 'https://www.google.com/']
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
