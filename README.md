@@ -13,6 +13,15 @@
 
 <br>
 
+<ul><li><h2>🛠️ Build:</h2></li></ul>
+<ul>
+  <li><h1>Api: </h1></li>
+  <li>Add MONGO_DB_URI, JWT_TOKEN and JWT_EXPIRES variables in .env of evernoted-api folder</li>
+  <li>Run <code>npm run build</code> or <code>npm start</code> to initialize api </li>
+  <br>
+  <li>Run <code>npm start</code> to initialize the client </li>
+</ul>
+
 <ul><li><h2>🚀 Technologies:</h2></li></ul>
 <ul>
   <li> React </li>
