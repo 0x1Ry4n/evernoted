@@ -9,7 +9,7 @@
 <p> ✔️ Rbx components library
 <p> ✔️ React Router </p>
 <p> ✔️ Rich text for editing notes </p>
-<p> ❌ Deployed application - in progress </p>
+<p> ✔️ Vercel deploy (some corrections to be made in user routes) - https://evernoted-client.vercel.app/</p>
 
 <br>
 
@@ -19,6 +19,8 @@
   <li>Run <code>npm run build</code> or <code>npm start</code> to initialize api </li>
   <li>The default client port is <code>3006</code>. Change that in .env file of evernoted-client folder</li>
   <li>Run <code>npm start</code> to initialize the client </li>
+  <li>Client deploy: https://evernoted-client.vercel.app/</li>
+  <li>Api deploy: https://evernoted-api.vercel.app/ </li>
 </ul>
 
 <br>
