@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "node index.js"
+    "build": "node index.js", 
+    "start": "node index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",
