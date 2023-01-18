@@ -17,7 +17,7 @@
 <h2>🛠️ How Build?</h2>
 <ul>
   <li>Add MONGO_DB_URI, JWT_TOKEN and JWT_EXPIRES variables in .env file of evernoted-api folder</li>
-  <li>Run <code>npm run build</code> or <code>npm start</code> to initialize api </li>
+  <li>Run <code>npm start</code> to start api </li>
   <li>The default client port is <code>3006</code>. Change that in .env file of evernoted-client folder</li>
   <li>Run <code>npm start</code> to initialize the client </li>
 </ul>
