@@ -16,6 +16,7 @@
 
 <h2>🛠️ How Build?</h2>
 <ul>
+  <li>Run <code>npm install</code> to install <i>client</i> and <i>api</i> dependencies</li> 
   <li>Add MONGO_DB_URI, JWT_TOKEN and JWT_EXPIRES variables in .env file of evernoted-api folder</li>
   <li>Run <code>npm start</code> to start api </li>
   <li>The default client port is <code>3006</code>. Change that in .env file of evernoted-client folder</li>
@@ -34,9 +35,9 @@
 
 <h2>👨‍💻 Technologies:</h2>
 <ul>
-  <li> React </li>
+  <li> Reac.js </li>
   <li> Node.js </li>
-  <li> Axios </li>
+  <li> Axios.js </li>
   <li> MongoDB (Mongoose) </li>
 </ul>
 
