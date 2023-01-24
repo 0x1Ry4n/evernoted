@@ -10,7 +10,7 @@
 <p> ✔️ React Router </p>
 <p> ✔️ Rich text for editing notes </p>
 <p> ✔️ Vercel deploy (some corrections to be made in user routes) 
-<p> ❌ Responsive application (some bugs)</p>
+<p> ❌ Responsive application (pending)</p>
 
 <br>
 
