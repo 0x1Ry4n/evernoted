@@ -35,7 +35,7 @@
 
 <h2>👨‍💻 Technologies:</h2>
 <ul>
-  <li> Reac.js </li>
+  <li> React.js </li>
   <li> Node.js </li>
   <li> Axios.js </li>
   <li> MongoDB (Mongoose) </li>
