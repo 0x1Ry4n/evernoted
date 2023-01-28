@@ -21,7 +21,7 @@ app.use('/users', usersRouter);
 app.use('/notes', notesRouter); 
 
 app.get('/', (req, res) => {
-    res.send('Hi, evernoted API is running!')
+    res.send('Evernoted API is running!')
 })
 
 app.listen(port, () => {
