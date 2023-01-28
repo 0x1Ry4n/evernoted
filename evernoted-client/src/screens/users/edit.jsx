@@ -13,7 +13,7 @@ const UserEdit = () => (
         <HeaderLogged />
         <Section size="medium" className="users">
             <Container>
-                <Column.Group centered className="users-edit">
+                <Column.Group centered className="users-edit" breakpoint="mobile">
                     <Column size={4}>
                         <Title size={5} className="has-text-grey has-text-left">
                         <FontAwesomeIcon icon={faUserCircle} /> Informações Pessoais

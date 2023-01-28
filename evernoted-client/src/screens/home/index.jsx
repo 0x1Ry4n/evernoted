@@ -21,7 +21,7 @@ const Home = () => {
                                 With evernoted it's easier to organize your notes and visualize them easily. Your notes are saved in the cloud through the MongoDB database and your account secured with JWT.<br /><br />
                                 Try it! It's free 💸.
                             </Title>
-                            <Link to="/register" className="button is-large is-custom-blue">
+                            <Link to="/register" className="button is-large is-custom-blue" breakpoint="mobile">
                                 <strong>Register for free Now</strong>
                             </Link>
                         </Column>
