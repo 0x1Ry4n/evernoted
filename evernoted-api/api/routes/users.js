@@ -54,13 +54,13 @@ router.put('/:id', withAuth, async (req, res) => {
   try {
     let updatedUser = User.findOneAndUpdate(
       { _id: req.user._id },
-      { $set: { name: name, email: email } },
+      { $set: {   name: name, email: email } },
       { upsert: true, 'new': true }
     );
 
     res.json(updatedUser);
   } catch (err) {
-    res.status(500).json({ error: 'Error updating user info!' });
+    res.status(500).json({ error: `Error updating user info! ${err}` });
   }
 });
 

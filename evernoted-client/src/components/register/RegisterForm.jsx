@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-import { Button, Field, Control, Input, Column, Section, Help, Label } from 'rbx';
+import { Button, Field, Control, Input, Column, Icon, Help, Label } from 'rbx';
 import UserService from '../../services/userService';
 import { Navigate } from 'react-router-dom';
 
@@ -29,11 +29,11 @@ const RegisterForm = () => {
     return (
         <Fragment>
             <Column.Group centered>
-                <form onSubmit={handleSubmit}>
-                    <Column size={12}>
+                <Column size={10}>
+                    <form onSubmit={handleSubmit}>
                         <Field>
-                            <Label size="small"><FontAwesomeIcon icon={faUser} /> Name:</Label>
-                            <Control>
+                            <Label><FontAwesomeIcon icon={faUser} /> Name:</Label>
+                            <Control iconLeft iconRight>
                                 <Input
                                     type="name"
                                     value={name}
@@ -42,11 +42,15 @@ const RegisterForm = () => {
                                     name="name"
                                     placeholder="Input a name..."
                                 />
+                                <Icon size="small" align="left">
+                                    <FontAwesomeIcon icon={faUser} />
+                                </Icon>
+
                             </Control>
                         </Field>
                         <Field>
-                            <Label size="small"><FontAwesomeIcon icon={faEnvelope} /> E-mail:</Label>
-                            <Control>
+                            <Label><FontAwesomeIcon icon={faEnvelope} /> E-mail:</Label>
+                            <Control iconLeft iconRight>
                                 <Input
                                     type="email"
                                     value={email}
@@ -55,11 +59,14 @@ const RegisterForm = () => {
                                     name="email"
                                     placeholder="Input a email..."
                                 />
+                                <Icon size="small" align="left">
+                                    <FontAwesomeIcon icon={faEnvelope} />
+                                </Icon>
                             </Control>
                         </Field>
                         <Field>
-                            <Label size="small"><FontAwesomeIcon icon={faLock} /> Password:</Label>
-                            <Control>
+                            <Label><FontAwesomeIcon icon={faLock} /> Password:</Label>
+                            <Control iconLeft iconRight>
                                 <Input
                                     type="password"
                                     value={password}
@@ -68,6 +75,9 @@ const RegisterForm = () => {
                                     name="password"
                                     placeholder="Input a password..."
                                 />
+                                <Icon size="small" align="left">
+                                    <FontAwesomeIcon icon={faLock} />
+                                </Icon>
                             </Control>
                         </Field>
                         <Field>
@@ -75,19 +85,17 @@ const RegisterForm = () => {
                                 <Column.Group>
                                     <Column>
                                         <a onClick={e => setRedirectToLogin(true)} className="button is-white has-text-custom-purple">Login or</a>
-                                    </Column>
-                                    <Column>
                                         <Button color="custom-purple" outlined>Register</Button>
                                     </Column>
                                 </Column.Group>
                             </Control>
                         </Field>
-                        {error && <Help color="danger">Email or Password invalid</Help>}
-                    </Column>
-                </form>
+                        {error && <Help size={12} color="danger">Email or Password invalid</Help>}
+                    </form>
+                </Column>
             </Column.Group>
         </Fragment>
-    );
-}
+    )
+};
 
 export default RegisterForm; 

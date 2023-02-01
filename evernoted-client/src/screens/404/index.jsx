@@ -14,7 +14,7 @@ const NotFound = () => {
                         </Column>
                         <Column size={5}>
                             <Title size={1} spaced className="has-text-custom-purple" style={{ fontSize: '60pt'}}>
-                                404.
+                                404 :(
                             </Title>
                             <Title size={5} spaced className="has-text-custom-purple" subtitle style={{ fontSize: '25pt' }}>
                                 Oops! You're lost

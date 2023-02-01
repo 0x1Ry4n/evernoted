@@ -1,12 +1,13 @@
 import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
-import { Button, Field, Control, Input, Column, Section, Help, Label } from "rbx";
+import { Button, Field, Control, Input, Column, Icon, Help, Label } from "rbx";
 import { Navigate } from "react-router-dom";
 import UserService from '../../services/userService';
+import { ButtonGroup } from 'rbx/elements/button/button-group';
 
 const LoginForm = () => {
-    
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [RedirectToRegister, setRedirectToRegister] = useState(false);
@@ -25,56 +26,61 @@ const LoginForm = () => {
             await UserService.login({ email: email, password: password });
             setRedirectToNotes(true);
         } catch (error) {
-            setError(true)  
+            setError(true)
         }
     }
 
     return (
         <Fragment>
             <Column.Group centered>
-                <form onSubmit={handleSubmit}>
-                    <Column size={12}>
+                <Column size={10}>
+                    <form onSubmit={handleSubmit}>
                         <Field>
-                            <Label size="small"><FontAwesomeIcon icon={faEnvelope} /> E-mail:</Label>
-                            <Control>
+                            <Label><FontAwesomeIcon icon={faEnvelope} /> E-mail</Label>
+                            <Control iconLeft iconRight>
                                 <Input
-                                    type="email"
                                     value={email}
                                     onChange={e => setEmail(e.target.value)}
                                     required
-                                    name="email"
-                                    placeholder="Enter a email..."
+                                    placeholder="Input a email..."
+                                    type="email"
                                 />
+                                <Icon size="small" align="left">
+                                    <FontAwesomeIcon icon={faEnvelope} />
+                                </Icon>
+
                             </Control>
                         </Field>
                         <Field>
-                            <Label size="small"><FontAwesomeIcon icon={faLock} /> Password:</Label>
-                            <Control>
+                            <Label><FontAwesomeIcon icon={faLock} /> Password</Label>
+                            <Control iconLeft iconRight>
                                 <Input
-                                    type="password"
                                     value={password}
                                     onChange={e => setPassword(e.target.value)}
                                     required
-                                    name="password"
-                                    placeholder="Enter a password..."
+                                    placeholder="Input a password..."
+                                    type="password"
                                 />
+                                <Icon size="small" align="left">
+                                    <FontAwesomeIcon icon={faLock} />
+                                </Icon>
                             </Control>
                         </Field>
-                        <Field>
-                            <Control>
-                                <Column.Group>
-                                    <Column>
-                                        <a onClick={e => setRedirectToRegister(true)} className="button is-white has-text-custom-purple">Register or</a>
-                                    </Column>
-                                    <Column>
-                                        <Button color="custom-purple" outlined>Login</Button>
-                                    </Column>
-                                </Column.Group>
-                            </Control>
+                        <Field centered>
+                            <ButtonGroup>
+                                <Control>
+                                    <Column.Group>
+                                        <Column>
+                                            <a onClick={e => setRedirectToRegister(true)} className="button is-white has-text-custom-purple">Register or</a>
+                                            <Button color="custom-purple" outlined>Login</Button>
+                                        </Column>
+                                    </Column.Group>
+                                </Control>
+                            </ButtonGroup>
                         </Field>
-                        {error && <Help color="danger">Email or Password invalid</Help>}
-                    </Column>
-                </form>
+                        {error && <Help size={12} color="danger">Email or Password invalid</Help>}
+                    </form>
+                </Column>
             </Column.Group>
         </Fragment>
     )

@@ -8,6 +8,10 @@ $custom-colors: (
   "custom-blue": ($custom-blue)
 );
 
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
 // Import Bulma styles
 @import "~bulma/bulma";
   
