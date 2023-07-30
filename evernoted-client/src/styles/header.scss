@@ -1,19 +1,8 @@
 @import "./custom_colors";
 
-nav.navbar {
-    height: 70px;
-    border-bottom: 1px solid black;
-
-    .navbar-brand {
-        img {
-            height: 40px;
-            margin-top: 15px;
-        }
-    }
-}
 
 .navbar-logged {
     .navbar-menu {
-        background-color: $custom-blue;
+        background-color: #317c7a;
     }
 }

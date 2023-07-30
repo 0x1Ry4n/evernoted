@@ -1,17 +1,18 @@
 import React, { Fragment } from 'react';
 import Header from "../../../components/header/Header";
 import LoginForm from '../../../components/login/LoginForm';
-import { Column, Section, Title, Container, Card } from "rbx";
+import { Column, Section, Container, Card } from "rbx";
 import "../../../styles/auth.scss";
 
 const Login = () => {
     return (
         <Fragment>
             <Header />
-            <Section size="medium" className="auth">
+
+            <Section size="large" className="auth">
                 <Container>
                     <Column.Group centered>
-                        <Column size={3}>
+                        <Column size={6}>
                             <Card>
                                 <Card.Content>
                                     <LoginForm />
@@ -20,15 +21,6 @@ const Login = () => {
                         </Column>
                     </Column.Group>
                 </Container>
-            </Section>
-            <Section>
-                <Column.Group>
-                    <Column size={12}>
-                        <Title size={6} className="has-text-grey has-text-centered">
-                            Your notes on the cloud
-                        </Title>
-                    </Column>   
-                </Column.Group>
             </Section>
         </Fragment>
     );

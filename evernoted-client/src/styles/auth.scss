@@ -1,6 +1,7 @@
 @import "./custom_colors";
 
 .auth {
-    background-color: $custom-blue;
-    height: calc(100% - 70px);
+    background: linear-gradient(90deg, #67B26F 0%, #4ca2cd 75%);
+    height: 100vh;
 }
+

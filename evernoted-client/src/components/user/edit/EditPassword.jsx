@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLock, faLockOpen } from '@fortawesome/free-solid-svg-icons';
-import { Button, Field, Control, Input, Column, Title, Help, Label } from 'rbx';
+import { Button, Field, Control, Input, Column, Help, Label } from 'rbx';
 import UserService from '../../../services/userService';
 
 const UserEditPassword = () => {
@@ -12,7 +12,7 @@ const UserEditPassword = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
 
-        if (password == password_confirmation) {
+        if (password === password_confirmation) {
             try {
                 await UserService.updatePassword({ password: password });
                 setStatus("success");
@@ -63,13 +63,13 @@ const UserEditPassword = () => {
                         </Column.Group>
                     </Control>
                 </Field>
-                {status == "error_update" &&
+                {status === "error_update" &&
                     <Help color="danger">Problem in password update</Help>
                 }
-                {status == "error_confirmation_password" &&
+                {status === "error_confirmation_password" &&
                     <Help color="danger">Password don't match</Help>
                 }
-                {status == "success" &&
+                {status === "success" &&
                     <Help color="primary">Updated with success</Help>
                 }
             </form>

@@ -1,7 +1,7 @@
-import axios from 'axios'; 
+import axios from "axios";
 
-const EVERNOTED_API_URI = "https://evernoted-api.vercel.app/";
+const EVERNOTED_API_URI = "http://localhost:3030";
 
-const Api = axios.create({baseURL: EVERNOTED_API_URI})
+const Api = axios.create({ baseURL: EVERNOTED_API_URI });
 
-export default Api; 
+export default Api;

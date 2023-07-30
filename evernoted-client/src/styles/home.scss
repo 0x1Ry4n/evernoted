@@ -1,11 +1,14 @@
 @import "./custom_colors";
 
-img {
-  opacity: 0.7;
-  cursor: pointer; 
-  transition: 0.5s ease all;
+.home {
+  background: linear-gradient(90deg, #67B26F 0%, #4ca2cd 75%);
 }
 
-img:hover {
-  opacity: 1.0;
+.testmonial-user-p {
+  color: #4a4a4a;
+  font-weight: bold;
+}
+
+.p-styles {
+  text-shadow: 1px 2px 2px #7e83d6;
 }
